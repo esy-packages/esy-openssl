@@ -2,7 +2,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/54y3s6ip6ti7y3vm/branch/esy?svg=true)](https://ci.appveyor.com/project/bryphe/esy-openssl/branch/esy)
 [![Build Status](https://travis-ci.org/bryphe/esy-openssl.svg?branch=esy)](https://travis-ci.org/bryphe/esy-openssl)
 
- OpenSSL 1.1.1h 22 Sep 2020
+OpenSSL 1.1.1h 22 Sep 2020
 
  Copyright (c) 1998-2020 The OpenSSL Project
  Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson
