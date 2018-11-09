@@ -1,3 +1,5 @@
 *.der binary
 /fuzz/corpora/** binary
 *.pfx binary
+
+esy/* text eol=LF
