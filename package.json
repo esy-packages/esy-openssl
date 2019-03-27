@@ -33,5 +33,9 @@
     }
   },
   "dependencies": {
+    "@opam/conf-autoconf": "*"
+  },
+  "resolutions": {
+    "@opam/conf-autoconf": "esy-packages/esy-autoconf:package.json#f5ab777",
   }
 }
