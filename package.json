@@ -1,7 +1,7 @@
 {
   "name": "esy-openssl",
   "version": "0.1.0",
-  "description": "Mirror of OpenSSL",
+  "description": "Mirror of OpenSSL.",
   "license": "GPLv3",
   "esy": {
     "build": [
