@@ -1,20 +1,23 @@
 jobs:
-- template: .ci/build.yaml  # Template reference
-  parameters:
-    host: macOS
-    pool:
-      vmImage: 'macOS-10.13'
+- job: macOS
+  host: macOS
+  pool:
+    vmImage: 'macOS-10.13'
+  steps:
+  - template: .ci/build.yaml
 
-- template: .ci/build.yaml  # Template reference
-  parameters:
-    host: Linux
-    pool:
-      vmImage: 'Ubuntu-16.04'
+- job: Linux
+  host: Linux
+  pool:
+    vmImage: 'Ubuntu-16.04'
+  steps:
+  - template: .ci/build.yaml
 
-- template: .ci/build.yaml  # Template reference
-  parameters:
-    host: Windows
-    pool:
-      vmImage: 'vs2017-win2016'
-    sign: true  # Extra step on Windows only
+- job: Windows
+  host: Windows
+  pool:
+    vmImage: 'vs2017-win2016'
+  sign: true  # Extra step on Windows only
+  steps:
+  - template: .ci/build.yaml
 
