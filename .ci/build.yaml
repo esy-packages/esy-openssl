@@ -22,8 +22,7 @@ jobs:
   - script: |
       cd test_dir
       esy install
-      esy build
-    displayName: 'Building esy-openssl'
+    displayName: 'Install esy-deps'
   - script: |
       cd test_dir
       esy x which openssl
