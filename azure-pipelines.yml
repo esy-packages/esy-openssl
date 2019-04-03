@@ -1,3 +1,4 @@
+name: esy-openssl
 jobs:
 - job: macOS
   pool:
