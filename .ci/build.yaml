@@ -21,6 +21,7 @@ jobs:
       esy
     displayName: 'Building esy-openssl'
   - script: |
-      echo $PWD
+      cd test_dir
       esy x which openssl
+      esy sh ../esy/test.sh
     displayName: 'Building and dry run'
