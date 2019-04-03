@@ -8,10 +8,10 @@ jobs:
   pool: ${{ parameters.pool }}
   steps:
   - ${{ if eq(parameters.sign, 'true') }}:
-    - script: 'npm install -g esy@latest --unsafe-perm'
+    - bash: 'npm install -g esy@latest --unsafe-perm'
       displayName: 'Installing deps'
   - ${{ if eq(parameters.sign, 'false') }}:
-    - script: 'sudo npm install -g esy@latest --unsafe-perm'
+    - bash: 'sudo npm install -g esy@latest --unsafe-perm'
       displayName: 'Installing deps'
   - bash: |
       mkdir -p test_dir
@@ -20,7 +20,7 @@ jobs:
       esy install
       esy
     displayName: 'Building esy-openssl'
-  - script: |
+  - bash: |
       cd test_dir
       esy x which openssl
       esy sh ../esy/test.sh
