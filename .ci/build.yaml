@@ -21,5 +21,7 @@ jobs:
       cat package.json
       esy install
     displayName: 'Installing deps'
-  - script: esy x which openssl
+  - script: |
+      echo $PWD
+      esy x which openssl
     displayName: 'Building and dry run'
