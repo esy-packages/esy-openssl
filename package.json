@@ -24,6 +24,13 @@
       [
         "make",
         "install"
+      ],
+      [
+        "bash",
+        "-c",
+        "mv",
+        "cacert-2019-11-27.pem",
+        "#{self.install / 'ssl'}"
       ]
     ],
     "buildsInSource": true,
