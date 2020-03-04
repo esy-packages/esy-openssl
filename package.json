@@ -28,7 +28,7 @@
       [
         "bash",
         "-c",
-        "mv cert.pem #{self.install / 'ssl'}"
+        "mv cert.pem #{self.install / 'ssl' / 'cert.pem'}"
       ]
     ],
     "buildsInSource": true,
