@@ -23,7 +23,8 @@
     "install": [
       [
         "make",
-        "install"
+        "install",
+        "--openssldir #{self.install / 'ssl'}"
       ],
       [
         "bash",
