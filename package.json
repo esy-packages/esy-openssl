@@ -38,10 +38,6 @@
     ],
     "buildsInSource": true,
     "exportedEnv": {
-      "PATH": {
-        "val": "#{self.install / 'ssl' : $PATH}",
-        "scope": "global"
-      },
       "LD_LIBRARY_PATH": {
         "val": "#{self.lib : $LD_LIBRARY_PATH}",
         "scope": "global"
