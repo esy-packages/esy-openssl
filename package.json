@@ -24,11 +24,6 @@
         "bash",
         "-c",
         "mkdir -p #{self.install / 'ssl'}"
-      ],
-      [
-        "bash",
-        "-c",
-        "mv cert.pem #{self.install / 'ssl'}"
       ]
     ],
     "buildsInSource": true,
