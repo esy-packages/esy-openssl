@@ -2,6 +2,27 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/54y3s6ip6ti7y3vm/branch/esy?svg=true)](https://ci.appveyor.com/project/bryphe/esy-openssl/branch/esy)
 [![Build Status](https://travis-ci.org/bryphe/esy-openssl.svg?branch=esy)](https://travis-ci.org/bryphe/esy-openssl)
 
+
+#### Usage
+Use esy [resolutions](https://esy.sh/docs/en/multiple-sandboxes.html#resolutions) to use `esy-openssl` package.
+
+```json
+  "resolutions": {
+    "esy-openssl": "esy-packages/esy-openssl#<commit-hash>"
+  }
+```
+
+For example, to use the `1.1.1l` release,
+```json
+  "resolutions": {
+    "esy-openssl": "esy-packages/esy-openssl#619ae2d46ca981ec26ab3287487ad98b157a01d1"
+  }
+```
+
+**Note** MacOS arm64 users will need [1.1.1.l](https://github.com/esy-packages/esy-openssl/tree/1_1_1l+esy) release
+Other releases present here include:
+1. [1.1.1h](https://github.com/esy-packages/esy-openssl/tree/1_1_1h+esy)
+
  -----------
 
  OpenSSL 1.1.1 11 Sep 2018
