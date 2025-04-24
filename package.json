@@ -1,35 +1,24 @@
 {
   "name": "esy-openssl",
-  "version": "1.1.1g",
-  "description": "Mirror of OpenSSL",
-  "license": "Apache 2.0",
-  "source": "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1g.tar.gz#33324ff957edaae8ae575817b456320378da46ff",
+  "version": "1.1.1000-t",
+  "description": "openssl packaged for esy",
+  "source": "https://www.openssl.org/source/openssl-1.1.1t.tar.gz#sha256:8dee9b24bdb1dcbf0c3d1e9b02fb8f6bf22165e807f45adeb7c9677536859d3b",
   "override": {
     "build": [
       [
-        "bash",
-        "-c",
-        "#{os == 'windows' ? './configure mingw64 --prefix=$cur__install --openssldir=$cur__install/ssl --cross-compile-prefix=x86_64-w64-mingw32-' : './config --prefix=$cur__install --openssldir=$cur__install/ssl'}"
+        "./Configure",
+        "--prefix=#{self.install}",
+        "--openssldir=#{self.lib / 'ssl'}",
+        "#{os == 'windows' ? 'mingw64': 'cc'}",
+        "#{os == 'windows' ? '--cross-compile-prefix=x86_64-w64-mingw32-': '--cross-compile-prefix=' }",
+        "no-zlib"
       ],
-      [
-        "make",
-        "-j4"
-      ]
+      "make -j#{self.jobs}"
     ],
     "install": [
       [
         "make",
         "install"
-      ],
-      [
-        "bash",
-        "-c",
-        "mkdir -p #{self.install / 'ssl'}"
-      ],
-      [
-        "bash",
-        "-c",
-        "mv cert.pem #{self.install / 'ssl'}"
       ]
     ],
     "buildsInSource": true,
@@ -55,9 +44,6 @@
         "scope": "global"
       }
     },
-    "dependencies": {
-      "@opam/conf-autoconf": "esy-packages/esy-autoconf:package.json#fb93edf",
-      "@opam/conf-pkg-config": "*"
-    }
+    "dependencies": {}
   }
 }
